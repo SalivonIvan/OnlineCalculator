@@ -62,15 +62,22 @@ header img{
     /*margin: 0 auto;*/
 }
 .textarea-out{
-    width: 266px;
+    min-width: 266px;
+    max-width: 266px;
     display: inline-block;
+    font-weight: bold;
+    font-size: 150%;
     /*background-color: honeydew;*/
 }
 .btn-out{
     width: 266px;
+    font-weight: bold;
+    font-size: 150%;
 }
 .calc-button{
     width: 50px;
+    font-weight: bold;
+    font-size: 150%;
 }
 .error-page-alert{
     max-width: 430px;
