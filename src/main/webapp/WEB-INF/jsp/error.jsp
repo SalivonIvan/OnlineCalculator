@@ -1,17 +1,17 @@
-<%-- 
-    Document   : error
-    Created on : 05.03.2016, 21:23:37
-    Author     : Salivon Ivan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@include file="jspf/header.jspf" %> 
+<main>
+    <section class="main">
+        <div class="container">
+            <div class="error-page-alert">
+                <div class="alert alert-danger text-center" role="alert">
+                    Що ж таке!? Щось зовсім не так. Спробуйте дещо змінити та зробіть підтвердження знову.
+                </div>
+                <a href="#" class="btn btn-lg btn-primary btn-block" role="button">
+                    Повернутись на сторінку авторизації
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<%@include file="jspf/footer.jspf" %>

@@ -1,13 +1,14 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="jspf/header.jspf" %> 
 <main>
             <section class="main">
                 <div class="container">
                     <div class="row panel-calculator text-center">
 
-                        <form role="form">
+                        <form role="form" action="result">
                             <div class="form-group">
-                                <a href="#" class="btn btn-m btn-primary btn-out" role="button">
-                                    ?????
+                                <a href="exit" class="btn btn-m btn-primary btn-out" role="button">
+                                    Вихід
                                 </a>
                             </div>
                             <div class="form-group">

@@ -24,8 +24,8 @@
             <div class="contaTiner-fluid bg-info">
                 <div class="row">
                     <div class="col-md-3 col-xs-3 col-sm-3 logo text-left">
-                        <p>
-                            <img height="100" src="../resources/image/logo.svg">
+                        <p class="text-right">
+                            <img height="100" src="${pageContext.servletContext.contextPath}/resources/image/logo.svg">
 
                         </p>
                     </div>
