@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/index")
 public class HomeController {
 
    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index() {
         System.out.println("dsjfsdkfksdfksdfsdjj");
-        ModelAndView mv = new ModelAndView();
+        ModelAndView mv = new ModelAndView("index");
         mv.addObject("message", "Hello Reader!");
-        mv.setViewName("index");
+        
         return mv;
     }
 }
