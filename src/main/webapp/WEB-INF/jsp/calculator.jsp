@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row panel-calculator text-center">
 
-                        <form role="form" action="result">
+                        <form role="form" action="result" method="post">
                             <div class="form-group">
                                 <a href="exit" class="btn btn-m btn-primary btn-out" role="button">
                                     Вихід
@@ -14,7 +14,7 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <textarea id="display" class=" textarea-out bg-success" rows="2" disabled=""></textarea>
+                                    <textarea id="display" name="exp" class=" textarea-out bg-success" readonly="" rows="2"></textarea>
 
                                 </div>
                                 <div class="row">

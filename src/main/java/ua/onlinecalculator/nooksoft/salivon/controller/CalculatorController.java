@@ -11,14 +11,23 @@ public class CalculatorController {
 
     @RequestMapping(value = "exit")
     public ModelAndView toHome() {
+        System.out.println("exit");
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("message", "Hello Reader!");
         return mv;
     }
+
     @RequestMapping(value = "result")
-    public ModelAndView toCalculate(@RequestParam("display")String expression){
+    public ModelAndView toCalculate(@RequestParam("exp") String expression) {
+        System.out.println("result");
+        System.out.println(expression);
         ModelAndView mv = new ModelAndView("calculator");
         mv.addObject("message", "Hello Reader!");
         return mv;
+    }
+    public String calculate(){
+        String result="";
+        
+        return result;
     }
 }
