@@ -58,6 +58,9 @@ header img{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+#inputCode{
+    margin-bottom: 20px;
+}
 .panel-calculator{
     padding: 15px;
     /*margin: 0 auto;*/

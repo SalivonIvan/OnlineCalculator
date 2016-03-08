@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import ua.onlinecalculator.nooksoft.salivon.util.CalculateExpression;
 
@@ -30,6 +31,15 @@ public class CalculatorController {
         ModelAndView mv = new ModelAndView("calculator");
         mv.addObject("result", calculate.giveResult());
         return mv;
+    }
+     @RequestMapping(value = "resultTest",produces = "application/json")
+     @ResponseBody
+    public String toCalculateTest(@RequestParam("exp") String expression) {
+        System.out.println("resultTest");
+        System.out.println(expression);
+        calculate.setExpresion(expression);
+       
+        return calculate.giveResult();
     }
 
 }

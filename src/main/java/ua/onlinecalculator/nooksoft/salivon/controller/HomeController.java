@@ -23,7 +23,6 @@ public class HomeController {
     public ModelAndView toHome() {
         System.out.println("index");
         ModelAndView mv = new ModelAndView("index");
-        mv.addObject("message", "Hello Reader!");
         return mv;
     }
 

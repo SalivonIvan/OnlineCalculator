@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row panel-calculator text-center">
 
-                        <form role="form" action="result" method="post">
+                        <form role="form">
                             <div class="form-group">
                                 <a href="exit" class="btn btn-m btn-primary btn-out" role="button">
                                     Вихід
@@ -28,11 +28,11 @@
                                 </div>
                                 <div class="row">
 
-                                    <button type="button" class="btn btn-default calc-button" disabled="disabled">?</button>
+                                    <button type="button" class="btn btn-default calc-button" disabled="disabled">←</button>
                                     <button type="button" class="btn btn-default calc-button" disabled="disabled">CE</button>
                                     <button type="button" class="btn btn-default calc-button" onclick="clickButtonC()">C</button>
                                     <button type="button" class="btn btn-default calc-button" disabled="disabled">+/-</button>
-                                    <button type="button" class="btn btn-default calc-button" disabled="disabled">?</button>
+                                    <button type="button" class="btn btn-default calc-button" disabled="disabled">√</button>
 
                                 </div>
                                 <div class="row">
@@ -66,7 +66,7 @@
 
                                     <button type="button" class="btn btn-default calc-button" onclick="clickButton0()">0</button>
                                     <button type="button" class="btn btn-default calc-button" onclick="clickButtonComa()">,</button>
-                                    <button type="submit" class="btn btn-default calc-button">=</button>
+                                    <button type="button" class="btn btn-default calc-button" onclick="clickButtonResult()">=</button>
 
                                 </div>
                             </div>
