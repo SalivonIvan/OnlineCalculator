@@ -5,9 +5,9 @@
         <div class="container">
             <div class="error-page-alert">
                 <div class="alert alert-danger text-center" role="alert">
-                    Що ж таке!? Щось зовсім не так. Спробуйте дещо змінити та зробіть підтвердження знову.
+                    ${message}
                 </div>
-                <a href="#" class="btn btn-lg btn-primary btn-block" role="button">
+                <a href="index" class="btn btn-lg btn-primary btn-block" role="button">
                     Повернутись на сторінку авторизації
                 </a>
             </div>

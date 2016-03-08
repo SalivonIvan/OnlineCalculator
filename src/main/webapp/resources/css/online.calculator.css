@@ -81,6 +81,8 @@ header img{
     font-size: 150%;
 }
 .error-page-alert{
+    font-size: 200%;
+    font-weight: bold;
     max-width: 430px;
     padding: 15px;
     margin: 0 auto;
