@@ -7,15 +7,16 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security.xsd">
     
-    <http auto-config="true">
-       
-       
+    <http>
+        
+        <form-login login-page="/index" />
+               
     </http>
     <authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="user" password="password" authorities="ROLE_USER" />
-                <user name="admin" password="password" authorities="ROLE_USER,ROLE_ADMIN" />
+                <user name="user" password="1111" authorities="ROLE_USER" />
+                <user name="admin" password="admin" authorities="ROLE_USER,ROLE_ADMIN" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
