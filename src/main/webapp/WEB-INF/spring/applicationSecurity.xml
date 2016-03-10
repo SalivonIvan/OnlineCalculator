@@ -8,17 +8,14 @@ http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security.xsd">
     
     <http auto-config="true">
-        <intercept-url pattern="/index*"
-               access="ROLE_USER,ROLE_ANONYMOUS" />
-        <intercept-url pattern="/calculator*" access="ROLE_USER" />
+       
        
     </http>
     <authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="admin" password="1985"
-      authorities="ROLE_ADMIN,ROLE_USER" />
-                <user name="user1" password="1111" authorities="ROLE_USER" />
+                <user name="user" password="password" authorities="ROLE_USER" />
+                <user name="admin" password="password" authorities="ROLE_USER,ROLE_ADMIN" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
