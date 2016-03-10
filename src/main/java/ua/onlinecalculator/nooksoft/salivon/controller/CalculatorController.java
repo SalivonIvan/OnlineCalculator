@@ -27,11 +27,9 @@ public class CalculatorController {
     }
 
     @RequestMapping(value = "exit")
-    public ModelAndView toHome() {
+    public String toHome() {
         System.out.println("exit");
-        ModelAndView mv = new ModelAndView("index");
-        mv.addObject("message", "Hello Reader!");
-        return mv;
+        return "redirect:/";
     }
 
     @RequestMapping(value = "result")
