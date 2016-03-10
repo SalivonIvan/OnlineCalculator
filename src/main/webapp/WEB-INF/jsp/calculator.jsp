@@ -14,7 +14,7 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <textarea id="display" name="exp" class=" textarea-out bg-success" readonly="" rows="2">${result}</textarea>
+                                    <textarea id="display" name="exp" class=" textarea-out bg-success" readonly="" rows="2">0</textarea>
 
                                 </div>
                                 <div class="row">
