@@ -4,10 +4,6 @@
     <section class="main">
         <div class="container">
             <div class="row panel-calculator text-center">
-                <form action="logout" method="post">
-                    <input type="submit" value="Вихід" class="btn btn-m btn-primary btn-out"/>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                </form>
                 <form role="form" action="logout" method="post">
                     <div class="form-group">
                         <input type="submit" value="Вихід" class="btn btn-m btn-primary btn-out"/>
