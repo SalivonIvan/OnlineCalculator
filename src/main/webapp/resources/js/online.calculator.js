@@ -151,7 +151,7 @@ function clickButtonC() {
 function clickButtonResult() {
     var display = document.getElementById("display");
 
-    $.ajax({url: "resultTest",
+    $.ajax({url: "result",
         data: {exp: display.textContent},
         
         success: function (data) {

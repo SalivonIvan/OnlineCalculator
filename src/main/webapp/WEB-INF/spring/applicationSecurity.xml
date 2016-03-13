@@ -11,17 +11,21 @@ http://www.springframework.org/schema/security/spring-security.xsd">
        
         <intercept-url pattern="/calculator" access="hasRole('USER')"/>
         <form-login login-page="/index" username-parameter="inputEmail" password-parameter="inputPassword"
-                    login-processing-url="/login" authentication-failure-url="/error"
+                    login-processing-url="/login" authentication-failure-url="/error?error=true"
                     default-target-url="/calculator"/>
-         <logout logout-url="/logout" logout-success-url="/index"/>
+        <logout  success-handler-ref="customLogoutSuccessHandler" logout-url="/logout" />
         
     </http>
+    
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="salivon_ivan@ukr.net" password="1111" authorities="ROLE_USER" />
-                <user name="admin@ua" password="admin" authorities="ROLE_USER,ROLE_ADMIN" />
-            </user-service>
+            <user-service properties="/WEB-INF/properties/userinfo.properties" />
+            <!--
+               <user-service>
+               <user name="salivon_ivan@ukr.net" password="1111" authorities="ROLE_USER" />
+               <user name="admin@ua" password="admin" authorities="ROLE_USER,ROLE_ADMIN" />
+               </user-service>
+            -->
         </authentication-provider>
     </authentication-manager>
  

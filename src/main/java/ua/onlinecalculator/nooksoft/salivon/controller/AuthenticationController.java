@@ -29,16 +29,10 @@ public class AuthenticationController {
         return "index";
     }
 
-    @RequestMapping(value = "index", method = RequestMethod.POST)
-    public String authorization(
-            @ModelAttribute("customer") Customer customer,
-            BindingResult result, SessionStatus status) {
-        System.out.println("index");
-        verifier.setCustomer(customer);
-        verifier.verifi();
-        return "redirect:calculator";
+    @RequestMapping(value = "error")
+    public String logError() {
+        return "error";
     }
-
 //    @RequestMapping(value = "calculate", method = RequestMethod.POST)
 //    public ModelAndView authorization(@RequestParam("inputEmail") String login, @RequestParam("inputPassword") String password) {
 //        System.out.println("calculate");

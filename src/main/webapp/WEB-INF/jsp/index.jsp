@@ -4,7 +4,7 @@
 <main>
     <section class="main">
         <div class="container-fluid">
-            <form:form class="form-signin" role="form" action="index" method="post">
+            <form:form class="form-signin" role="form" action="${pageContext.request.contextPath}/login" method="post">
                 <h2 class="form-signin-heading">Вхід</h2>
                 <label for="inputEmail" class="sr-only">Імейл</label>
                 <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Імейл" required autofocus>
@@ -13,8 +13,8 @@
                 <h3 class="form-signin-heading">Код авторизації</h3>
                 <input type="text" class="form-control" id="code" readonly="">
                 <input type="text" class="form-control" id="inputCode" placeholder="Код" readonly="">
-                
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Зареєструватись</button>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Авторизуватись</button>
             </form:form>>
         </div>
     </section>

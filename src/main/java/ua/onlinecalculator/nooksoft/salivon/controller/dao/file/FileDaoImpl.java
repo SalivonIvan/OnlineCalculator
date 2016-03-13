@@ -16,7 +16,7 @@ public class FileDaoImpl implements FileDao {
 
     @Override
     public void saveCustomer(Customer customer) {
-        File file = new File("cusromer.csv");
+        File file = new File("customer.csv");
         try (BufferedWriter br = new BufferedWriter(new FileWriter(file, true))) {
             br.write(customer.getLogin() + "|" + customer.getPassword() + "\n");
         } catch (IOException ex) {
@@ -27,7 +27,7 @@ public class FileDaoImpl implements FileDao {
     @Override
     public ArrayList<String> getLoginCustomers() {
         ArrayList<String> loginCustomers = new ArrayList<>();
-        File file = new File("cusromer.csv");
+        File file = new File("customer.csv");
         String strCustomer = null;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 

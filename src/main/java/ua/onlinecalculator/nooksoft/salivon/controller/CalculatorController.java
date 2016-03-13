@@ -25,30 +25,13 @@ public class CalculatorController {
         model.addAttribute("customer", customer);
         return "calculator";
     }
-
-    @RequestMapping(value = "exit")
-    public String toHome() {
-        System.out.println("exit");
-        return "redirect:/";
-    }
-
-    @RequestMapping(value = "result")
-    public ModelAndView toCalculate(@RequestParam("exp") String expression) {
-        System.out.println("result");
-        System.out.println(expression);
-        calculate.setExpresion(expression);
-        ModelAndView mv = new ModelAndView("calculator");
-        mv.addObject("result", calculate.giveResult());
-        return mv;
-    }
-
-    @RequestMapping(value = "resultTest", produces = "application/json")
+ 
+    @RequestMapping(value = "result", produces = "application/json")
     @ResponseBody
     public String toCalculateTest(@RequestParam("exp") String expression) {
         System.out.println("resultTest");
         System.out.println(expression);
         calculate.setExpresion(expression);
-
         return calculate.giveResult();
     }
 
