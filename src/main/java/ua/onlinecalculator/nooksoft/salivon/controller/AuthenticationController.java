@@ -1,13 +1,12 @@
 package ua.onlinecalculator.nooksoft.salivon.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.support.SessionStatus;
 import ua.onlinecalculator.nooksoft.salivon.controller.beans.Customer;
 import ua.onlinecalculator.nooksoft.salivon.util.ValidatorCustomer;
 import ua.onlinecalculator.nooksoft.salivon.util.VerifierCustomer;
@@ -20,10 +19,11 @@ public class AuthenticationController {
     private ValidatorCustomer validator;
     @Autowired
     private VerifierCustomer verifier;
+    static Logger log = LogManager.getLogger(AuthenticationController.class);
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public String setupForm(Model model) {
-        System.out.println("index");
+        log.info("open page index.jsp");
         Customer customer = new Customer();
         model.addAttribute("customer", customer);
         return "index";
@@ -31,6 +31,7 @@ public class AuthenticationController {
 
     @RequestMapping(value = "error")
     public String logError() {
+        log.info("open page error.jsp");
         return "error";
     }
 //    @RequestMapping(value = "calculate", method = RequestMethod.POST)
