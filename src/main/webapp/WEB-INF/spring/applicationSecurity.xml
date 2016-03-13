@@ -8,15 +8,19 @@ http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security.xsd">
     
     <http>
+       
+        <intercept-url pattern="/calculator" access="hasRole('USER')"/>
+        <form-login login-page="/index" username-parameter="inputEmail" password-parameter="inputPassword"
+                    login-processing-url="/login" authentication-failure-url="/error"
+                    default-target-url="/calculator"/>
+         <logout logout-url="/logout" logout-success-url="/index"/>
         
-        <form-login login-page="/index" />
-               
     </http>
     <authentication-manager>
         <authentication-provider>
             <user-service>
-                <user name="user" password="1111" authorities="ROLE_USER" />
-                <user name="admin" password="admin" authorities="ROLE_USER,ROLE_ADMIN" />
+                <user name="salivon_ivan@ukr.net" password="1111" authorities="ROLE_USER" />
+                <user name="admin@ua" password="admin" authorities="ROLE_USER,ROLE_ADMIN" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
